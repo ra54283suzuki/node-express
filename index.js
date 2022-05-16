@@ -2,9 +2,10 @@
 
 const express = require("express");
 const app = express();
+const coronaData = require("./coronaData.json");
 
 app.get("/", function(req, res) {
-  res.send("<h1>こんにちはの見出し</h1>");
+  res.send(coronaData);
 });
 
 app.listen(5000, function() {
